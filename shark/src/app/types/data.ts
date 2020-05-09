@@ -23,3 +23,13 @@ export interface ParkingSpace {
     name : string; // 停车牌名称
     user: UserState; //当前使用用户
 }
+
+export interface ModelMeta {
+    id : number;
+    title : string;
+    uid: string;
+    type : string;
+    version:string;
+    size : number[];
+    children: ModelMeta[] | null;
+}

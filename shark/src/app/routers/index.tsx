@@ -2,6 +2,7 @@ import React from 'react'
 import { Router, Link, RouteComponentProps } from "@reach/router"
 import ParkingPage from 'app/container/parkingPage'
 import LoginPage from './../container/login';
+import ModelShow from './../container/modelshow';
 
 
 let Parking = (props: RouteComponentProps) => <ParkingPage />
@@ -10,6 +11,7 @@ let About = (props: RouteComponentProps) => {
         <div> ccq present! </div>
     )
 }
+let TreeShow = (props:RouteComponentProps) => <ModelShow />
 
 let Login =(props:RouteComponentProps) => <LoginPage></LoginPage>
 
@@ -29,6 +31,9 @@ const HomePage = () => {
                     <li>
                         <Link to="about">关于</Link>
                     </li>
+                    <li>
+                        <Link to="tree">模型</Link>
+                    </li>
                 </ul>
             </nav>
 
@@ -36,6 +41,7 @@ const HomePage = () => {
                 <Login path='/'></Login>
                 <Parking path="parking"></Parking>
                 <About path='about'></About>
+                <TreeShow path='tree'></TreeShow>
             </Router>
         </div>
     )
